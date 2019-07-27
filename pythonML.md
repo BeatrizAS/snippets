@@ -58,9 +58,9 @@ regd.fit(X,y)
 # Random Forest
 ```python
 # Load the library
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 # Create an instance
-clf = RandomForestClassifier(max_depth=4)
+clf = RandomForestRegressor(max_depth=4)
 # Fit the data
 clf.fit(X,y)
 ```
@@ -121,11 +121,26 @@ clf = SVC(kernel="linear",C=10)
 # Fit the data
 clf.fit(X,y)
 ```
+
 # Random Forest
+```python
+# Load the library
+from sklearn.ensemble import RandomForestClassifier
+# Create an instance
+clf = RandomForestClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 
 # Gradient Boosting Tree
-
-
+```python
+# Load the library
+from sklearn.ensemble import GradientBoostingClassifier
+# Create an instance
+clf = GradientBoostingClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 
 # Train-test split
 ```python
