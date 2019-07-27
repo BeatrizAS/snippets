@@ -56,8 +56,24 @@ regd = DecisionTreeRegressor(max_depth=3)
 regd.fit(X,y)
 ```
 # Random Forest
+```python
+# Load the library
+from sklearn.ensemble import RandomForestClassifier
+# Create an instance
+clf = RandomForestClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 
 # Gradient Boosting Tree
+```python
+# Load the library
+from sklearn.ensemble import GradientBoostingClassifier
+# Create an instance
+clf = GradientBoostingClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 
 # Classification
 ## Logistic regression
@@ -92,11 +108,11 @@ clf.fit(X,y)
 Parameters:
 * C: Sum of Error Margins
 * kernel:
-* linear: line of separation
-* rbf: circle of separation
-* Additional param gamma: Inverse of the radius
-* poly: curved line of separation
-* Additional param degree: Degree of the polynome
+ * linear: line of separation
+ * rbf: circle of separation
+    * Additional param gamma: Inverse of the radius
+ * poly: curved line of separation
+    * Additional param degree: Degree of the polynome
 ```python
 # Load the library
 from sklearn.svm import SVC
@@ -106,10 +122,23 @@ clf = SVC(kernel="linear",C=10)
 clf.fit(X,y)
 ```
 # Random Forest
-
+```python
+# Load the library
+from sklearn.ensemble import RandomForestClassifier
+# Create an instance
+clf = RandomForestClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 # Gradient Boosting Tree
-
-
+```python
+# Load the library
+from sklearn.ensemble import GradientBoostingClassifier
+# Create an instance
+clf = GradientBoostingClassifier(max_depth=4)
+# Fit the data
+clf.fit(X,y)
+```
 
 # Train-test split
 ```python
@@ -223,7 +252,7 @@ cross_val_score(reg,X,y,cv=5,scoring="neg_mean_squared_error")
 from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import KNeighborsRegressor
 reg_test = GridSearchCV(KNeighborsRegressor(),
-param_grid={"n_neighbors":np.arange(3,50)})
+ param_grid={"n_neighbors":np.arange(3,50)})
 # Fit will test all of the combinations
 reg_test.fit(X,y)
 # Best estimator and best parameters
